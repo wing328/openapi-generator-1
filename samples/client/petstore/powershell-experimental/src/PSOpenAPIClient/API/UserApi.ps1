@@ -1,4 +1,4 @@
-function Invoke-UserApiCreateUser {
+function Invoke-OpenAPIUserApiCreateUser {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $true)]
@@ -10,13 +10,19 @@ function Invoke-UserApiCreateUser {
         'Calling method: UserApi-CreateUser' | Write-Verbose
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
-        $Script:UserApi.CreateUser(
-            ${body}
-        )
+        # TODO call Invoke-API
+
+        #$Script:UserApi.CreateUser(
+        #
+        #    
+        #    ${body}
+        #    
+        #
+        #)
     }
 }
 
-function Invoke-UserApiCreateUsersWithArrayInput {
+function Invoke-OpenAPIUserApiCreateUsersWithArrayInput {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $true)]
@@ -28,13 +34,19 @@ function Invoke-UserApiCreateUsersWithArrayInput {
         'Calling method: UserApi-CreateUsersWithArrayInput' | Write-Verbose
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
-        $Script:UserApi.CreateUsersWithArrayInput(
-            ${body}
-        )
+        # TODO call Invoke-API
+
+        #$Script:UserApi.CreateUsersWithArrayInput(
+        #
+        #    
+        #    ${body}
+        #    
+        #
+        #)
     }
 }
 
-function Invoke-UserApiCreateUsersWithListInput {
+function Invoke-OpenAPIUserApiCreateUsersWithListInput {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $true)]
@@ -46,13 +58,19 @@ function Invoke-UserApiCreateUsersWithListInput {
         'Calling method: UserApi-CreateUsersWithListInput' | Write-Verbose
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
-        $Script:UserApi.CreateUsersWithListInput(
-            ${body}
-        )
+        # TODO call Invoke-API
+
+        #$Script:UserApi.CreateUsersWithListInput(
+        #
+        #    
+        #    ${body}
+        #    
+        #
+        #)
     }
 }
 
-function Invoke-UserApiDeleteUser {
+function Invoke-OpenAPIUserApiDeleteUser {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $true)]
@@ -64,13 +82,19 @@ function Invoke-UserApiDeleteUser {
         'Calling method: UserApi-DeleteUser' | Write-Verbose
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
-        $Script:UserApi.DeleteUser(
-            ${username}
-        )
+        # TODO call Invoke-API
+
+        #$Script:UserApi.DeleteUser(
+        #
+        #    
+        #    ${username}
+        #    
+        #
+        #)
     }
 }
 
-function Invoke-UserApiGetUserByName {
+function Invoke-OpenAPIUserApiGetUserByName {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $true)]
@@ -82,13 +106,19 @@ function Invoke-UserApiGetUserByName {
         'Calling method: UserApi-GetUserByName' | Write-Verbose
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
-        $Script:UserApi.GetUserByName(
-            ${username}
-        )
+        # TODO call Invoke-API
+
+        #$Script:UserApi.GetUserByName(
+        #
+        #    
+        #    ${username}
+        #    
+        #
+        #)
     }
 }
 
-function Invoke-UserApiLoginUser {
+function Invoke-OpenAPIUserApiLoginUser {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $true)]
@@ -103,14 +133,23 @@ function Invoke-UserApiLoginUser {
         'Calling method: UserApi-LoginUser' | Write-Verbose
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
-        $Script:UserApi.LoginUser(
-            ${username},
-            ${password}
-        )
+        # TODO call Invoke-API
+
+        #$Script:UserApi.LoginUser(
+        #
+        #    
+        #    ${username},
+        #    
+        #
+        #    
+        #    ${password}
+        #    
+        #
+        #)
     }
 }
 
-function Invoke-UserApiLogoutUser {
+function Invoke-OpenAPIUserApiLogoutUser {
     [CmdletBinding()]
     Param (
     )
@@ -119,12 +158,15 @@ function Invoke-UserApiLogoutUser {
         'Calling method: UserApi-LogoutUser' | Write-Verbose
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
-        $Script:UserApi.LogoutUser(
-        )
+        # TODO call Invoke-API
+
+        #$Script:UserApi.LogoutUser(
+        #
+        #)
     }
 }
 
-function Invoke-UserApiUpdateUser {
+function Invoke-OpenAPIUserApiUpdateUser {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $true)]
@@ -139,10 +181,19 @@ function Invoke-UserApiUpdateUser {
         'Calling method: UserApi-UpdateUser' | Write-Verbose
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
-        $Script:UserApi.UpdateUser(
-            ${username},
-            ${body}
-        )
+        # TODO call Invoke-API
+
+        #$Script:UserApi.UpdateUser(
+        #
+        #    
+        #    ${username},
+        #    
+        #
+        #    
+        #    ${body}
+        #    
+        #
+        #)
     }
 }
 

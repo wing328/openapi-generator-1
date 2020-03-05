@@ -4,27 +4,27 @@ All URIs are relative to *http://petstore.swagger.io/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AddPet**](PetApi.md#addpet) | **POST** /pet | Add a new pet to the store
-[**DeletePet**](PetApi.md#deletepet) | **DELETE** /pet/{petId} | Deletes a pet
-[**FindPetsByStatus**](PetApi.md#findpetsbystatus) | **GET** /pet/findByStatus | Finds Pets by status
-[**FindPetsByTags**](PetApi.md#findpetsbytags) | **GET** /pet/findByTags | Finds Pets by tags
-[**GetPetById**](PetApi.md#getpetbyid) | **GET** /pet/{petId} | Find pet by ID
-[**UpdatePet**](PetApi.md#updatepet) | **PUT** /pet | Update an existing pet
-[**UpdatePetWithForm**](PetApi.md#updatepetwithform) | **POST** /pet/{petId} | Updates a pet in the store with form data
-[**UploadFile**](PetApi.md#uploadfile) | **POST** /pet/{petId}/uploadImage | uploads an image
+[**Invoke-OpenAPIPetApiAddPet**](PetApi.md#addpet) | **POST** /pet | Add a new pet to the store
+[**Invoke-OpenAPIPetApiDeletePet**](PetApi.md#deletepet) | **DELETE** /pet/{petId} | Deletes a pet
+[**Invoke-OpenAPIPetApiFindPetsByStatus**](PetApi.md#findpetsbystatus) | **GET** /pet/findByStatus | Finds Pets by status
+[**Invoke-OpenAPIPetApiFindPetsByTags**](PetApi.md#findpetsbytags) | **GET** /pet/findByTags | Finds Pets by tags
+[**Invoke-OpenAPIPetApiGetPetById**](PetApi.md#getpetbyid) | **GET** /pet/{petId} | Find pet by ID
+[**Invoke-OpenAPIPetApiUpdatePet**](PetApi.md#updatepet) | **PUT** /pet | Update an existing pet
+[**Invoke-OpenAPIPetApiUpdatePetWithForm**](PetApi.md#updatepetwithform) | **POST** /pet/{petId} | Updates a pet in the store with form data
+[**Invoke-OpenAPIPetApiUploadFile**](PetApi.md#uploadfile) | **POST** /pet/{petId}/uploadImage | uploads an image
 
 
 
-## AddPet
+## Invoke-OpenAPIPetApiAddPet
 
-> void AddPet (Pet body )
+> void Invoke-OpenAPIPetApiAddPet (Pet body )
 
 Add a new pet to the store
 
 ### Example
 
 ```powershell
-AddPet -body 
+Invoke-OpenAPIPetApiAddPet -body 
 ```
 
 ### Parameters
@@ -58,16 +58,16 @@ void (empty response body)
 [[Back to README]](../README.md)
 
 
-## DeletePet
+## Invoke-OpenAPIPetApiDeletePet
 
-> void DeletePet (Int64 petId , String apiKey )
+> void Invoke-OpenAPIPetApiDeletePet (Int64 petId , String apiKey )
 
 Deletes a pet
 
 ### Example
 
 ```powershell
-DeletePet -petId 789 -apiKey apiKey_example
+Invoke-OpenAPIPetApiDeletePet -petId 789 -apiKey apiKey_example
 ```
 
 ### Parameters
@@ -102,9 +102,9 @@ void (empty response body)
 [[Back to README]](../README.md)
 
 
-## FindPetsByStatus
+## Invoke-OpenAPIPetApiFindPetsByStatus
 
-> PSOpenAPIClient.Model.Pet[] FindPetsByStatus (String[] status )
+> PSOpenAPIClient.Model.Pet[] Invoke-OpenAPIPetApiFindPetsByStatus (String[] status )
 
 Finds Pets by status
 
@@ -113,7 +113,7 @@ Multiple status values can be provided with comma separated strings
 ### Example
 
 ```powershell
-$result = FindPetsByStatus -status 
+$result = Invoke-OpenAPIPetApiFindPetsByStatus -status 
 ```
 
 ### Parameters
@@ -148,9 +148,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## FindPetsByTags
+## Invoke-OpenAPIPetApiFindPetsByTags
 
-> PSOpenAPIClient.Model.Pet[] FindPetsByTags (String[] tags )
+> PSOpenAPIClient.Model.Pet[] Invoke-OpenAPIPetApiFindPetsByTags (String[] tags )
 
 Finds Pets by tags
 
@@ -159,7 +159,7 @@ Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3
 ### Example
 
 ```powershell
-$result = FindPetsByTags -tags 
+$result = Invoke-OpenAPIPetApiFindPetsByTags -tags 
 ```
 
 ### Parameters
@@ -194,9 +194,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## GetPetById
+## Invoke-OpenAPIPetApiGetPetById
 
-> PSOpenAPIClient.Model.Pet GetPetById (Int64 petId )
+> PSOpenAPIClient.Model.Pet Invoke-OpenAPIPetApiGetPetById (Int64 petId )
 
 Find pet by ID
 
@@ -205,7 +205,7 @@ Returns a single pet
 ### Example
 
 ```powershell
-$result = GetPetById -petId 789
+$result = Invoke-OpenAPIPetApiGetPetById -petId 789
 ```
 
 ### Parameters
@@ -241,16 +241,16 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## UpdatePet
+## Invoke-OpenAPIPetApiUpdatePet
 
-> void UpdatePet (Pet body )
+> void Invoke-OpenAPIPetApiUpdatePet (Pet body )
 
 Update an existing pet
 
 ### Example
 
 ```powershell
-UpdatePet -body 
+Invoke-OpenAPIPetApiUpdatePet -body 
 ```
 
 ### Parameters
@@ -286,16 +286,16 @@ void (empty response body)
 [[Back to README]](../README.md)
 
 
-## UpdatePetWithForm
+## Invoke-OpenAPIPetApiUpdatePetWithForm
 
-> void UpdatePetWithForm (Int64 petId , String name , String status )
+> void Invoke-OpenAPIPetApiUpdatePetWithForm (Int64 petId , String name , String status )
 
 Updates a pet in the store with form data
 
 ### Example
 
 ```powershell
-UpdatePetWithForm -petId 789 -name name_example -status status_example
+Invoke-OpenAPIPetApiUpdatePetWithForm -petId 789 -name name_example -status status_example
 ```
 
 ### Parameters
@@ -331,16 +331,16 @@ void (empty response body)
 [[Back to README]](../README.md)
 
 
-## UploadFile
+## Invoke-OpenAPIPetApiUploadFile
 
-> PSOpenAPIClient.Model.ApiResponse UploadFile (Int64 petId , String additionalMetadata , String file )
+> PSOpenAPIClient.Model.ApiResponse Invoke-OpenAPIPetApiUploadFile (Int64 petId , String additionalMetadata , String file )
 
 uploads an image
 
 ### Example
 
 ```powershell
-$result = UploadFile -petId 789 -additionalMetadata additionalMetadata_example -file BINARY_DATA_HERE
+$result = Invoke-OpenAPIPetApiUploadFile -petId 789 -additionalMetadata additionalMetadata_example -file BINARY_DATA_HERE
 ```
 
 ### Parameters

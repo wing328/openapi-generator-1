@@ -1,4 +1,4 @@
-function Invoke-StoreApiDeleteOrder {
+function Invoke-OpenAPIStoreApiDeleteOrder {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $true)]
@@ -10,13 +10,19 @@ function Invoke-StoreApiDeleteOrder {
         'Calling method: StoreApi-DeleteOrder' | Write-Verbose
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
-        $Script:StoreApi.DeleteOrder(
-            ${orderId}
-        )
+        # TODO call Invoke-API
+
+        #$Script:StoreApi.DeleteOrder(
+        #
+        #    
+        #    ${orderId}
+        #    
+        #
+        #)
     }
 }
 
-function Invoke-StoreApiGetInventory {
+function Invoke-OpenAPIStoreApiGetInventory {
     [CmdletBinding()]
     Param (
     )
@@ -25,12 +31,15 @@ function Invoke-StoreApiGetInventory {
         'Calling method: StoreApi-GetInventory' | Write-Verbose
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
-        $Script:StoreApi.GetInventory(
-        )
+        # TODO call Invoke-API
+
+        #$Script:StoreApi.GetInventory(
+        #
+        #)
     }
 }
 
-function Invoke-StoreApiGetOrderById {
+function Invoke-OpenAPIStoreApiGetOrderById {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $true)]
@@ -42,13 +51,19 @@ function Invoke-StoreApiGetOrderById {
         'Calling method: StoreApi-GetOrderById' | Write-Verbose
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
-        $Script:StoreApi.GetOrderById(
-            ${orderId}
-        )
+        # TODO call Invoke-API
+
+        #$Script:StoreApi.GetOrderById(
+        #
+        #    
+        #    ${orderId}
+        #    
+        #
+        #)
     }
 }
 
-function Invoke-StoreApiPlaceOrder {
+function Invoke-OpenAPIStoreApiPlaceOrder {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $true)]
@@ -60,9 +75,15 @@ function Invoke-StoreApiPlaceOrder {
         'Calling method: StoreApi-PlaceOrder' | Write-Verbose
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
-        $Script:StoreApi.PlaceOrder(
-            ${body}
-        )
+        # TODO call Invoke-API
+
+        #$Script:StoreApi.PlaceOrder(
+        #
+        #    
+        #    ${body}
+        #    
+        #
+        #)
     }
 }
 

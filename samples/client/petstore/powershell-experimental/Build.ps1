@@ -38,17 +38,17 @@ function Get-FunctionsToExport {
 }
 
 $ScriptDir = Split-Path $script:MyInvocation.MyCommand.Path
-$ClientPath = ("" | Resolve-Path).ProviderPath
+#$ClientPath = ("" | Resolve-Path).ProviderPath
 $FunctionPath = 'API', 'Model' | ForEach-Object {Join-Path "$ScriptDir\src\PSOpenAPIClient\" $_}
 $BinPath = "$ScriptDir\src\PSOpenAPIClient\Bin"
-
-Start-Process -FilePath "$ClientPath\build.bat" -WorkingDirectory $ClientPath -Wait -NoNewWindow
-
+#
+#Start-Process -FilePath "$ClientPath\build.bat" -WorkingDirectory $ClientPath -Wait -NoNewWindow
+#
 if (!(Test-Path "$ScriptDir\src\PSOpenAPIClient\Bin" -PathType Container)) {
     New-Item "$ScriptDir\src\PSOpenAPIClient\Bin" -ItemType Directory > $null
 }
 
-Copy-Item "$ClientPath\bin\*.dll" $BinPath
+#Copy-Item "$ClientPath\bin\*.dll" $BinPath
 
 $Manifest = @{
     Path = "$ScriptDir\src\PSOpenAPIClient\PSOpenAPIClient.psd1"

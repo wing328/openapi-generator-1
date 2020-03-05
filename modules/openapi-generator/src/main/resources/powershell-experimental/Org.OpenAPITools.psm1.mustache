@@ -1,6 +1,6 @@
 #region Import functions
 
-'API', 'Model', 'Private' | Get-ChildItem -Path {
+'API', 'Model', 'Private', 'Utils' | Get-ChildItem -Path {
     Join-Path $PSScriptRoot $_
 } -Filter '*.ps1' | ForEach-Object {
     Write-Verbose "Importing file: $($_.BaseName)"
@@ -21,8 +21,8 @@
 {{#operations}}
 {{#operation}}
 {{#-first}}
-'Creating object: {{{packageName}}}.Api.{{{classname}}}' | Write-Verbose
-$Script:{{{classname}}}= New-Object -TypeName {{{packageName}}}.Api.{{{classname}}} -ArgumentList @($null)
+#'Creating object: {{{packageName}}}.Api.{{{classname}}}' | Write-Verbose
+#$Script:{{{classname}}}= New-Object -TypeName {{{packageName}}}.Api.{{{classname}}} -ArgumentList @($null)
 
 {{/-first}}
 {{/operation}}

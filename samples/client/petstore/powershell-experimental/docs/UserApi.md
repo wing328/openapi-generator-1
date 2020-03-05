@@ -4,20 +4,20 @@ All URIs are relative to *http://petstore.swagger.io/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateUser**](UserApi.md#createuser) | **POST** /user | Create user
-[**CreateUsersWithArrayInput**](UserApi.md#createuserswitharrayinput) | **POST** /user/createWithArray | Creates list of users with given input array
-[**CreateUsersWithListInput**](UserApi.md#createuserswithlistinput) | **POST** /user/createWithList | Creates list of users with given input array
-[**DeleteUser**](UserApi.md#deleteuser) | **DELETE** /user/{username} | Delete user
-[**GetUserByName**](UserApi.md#getuserbyname) | **GET** /user/{username} | Get user by user name
-[**LoginUser**](UserApi.md#loginuser) | **GET** /user/login | Logs user into the system
-[**LogoutUser**](UserApi.md#logoutuser) | **GET** /user/logout | Logs out current logged in user session
-[**UpdateUser**](UserApi.md#updateuser) | **PUT** /user/{username} | Updated user
+[**Invoke-OpenAPIUserApiCreateUser**](UserApi.md#createuser) | **POST** /user | Create user
+[**Invoke-OpenAPIUserApiCreateUsersWithArrayInput**](UserApi.md#createuserswitharrayinput) | **POST** /user/createWithArray | Creates list of users with given input array
+[**Invoke-OpenAPIUserApiCreateUsersWithListInput**](UserApi.md#createuserswithlistinput) | **POST** /user/createWithList | Creates list of users with given input array
+[**Invoke-OpenAPIUserApiDeleteUser**](UserApi.md#deleteuser) | **DELETE** /user/{username} | Delete user
+[**Invoke-OpenAPIUserApiGetUserByName**](UserApi.md#getuserbyname) | **GET** /user/{username} | Get user by user name
+[**Invoke-OpenAPIUserApiLoginUser**](UserApi.md#loginuser) | **GET** /user/login | Logs user into the system
+[**Invoke-OpenAPIUserApiLogoutUser**](UserApi.md#logoutuser) | **GET** /user/logout | Logs out current logged in user session
+[**Invoke-OpenAPIUserApiUpdateUser**](UserApi.md#updateuser) | **PUT** /user/{username} | Updated user
 
 
 
-## CreateUser
+## Invoke-OpenAPIUserApiCreateUser
 
-> void CreateUser (User body )
+> void Invoke-OpenAPIUserApiCreateUser (User body )
 
 Create user
 
@@ -26,7 +26,7 @@ This can only be done by the logged in user.
 ### Example
 
 ```powershell
-CreateUser -body 
+Invoke-OpenAPIUserApiCreateUser -body 
 ```
 
 ### Parameters
@@ -60,16 +60,16 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## CreateUsersWithArrayInput
+## Invoke-OpenAPIUserApiCreateUsersWithArrayInput
 
-> void CreateUsersWithArrayInput (PSOpenAPIClient.Model.User[] body )
+> void Invoke-OpenAPIUserApiCreateUsersWithArrayInput (PSOpenAPIClient.Model.User[] body )
 
 Creates list of users with given input array
 
 ### Example
 
 ```powershell
-CreateUsersWithArrayInput -body 
+Invoke-OpenAPIUserApiCreateUsersWithArrayInput -body 
 ```
 
 ### Parameters
@@ -103,16 +103,16 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## CreateUsersWithListInput
+## Invoke-OpenAPIUserApiCreateUsersWithListInput
 
-> void CreateUsersWithListInput (PSOpenAPIClient.Model.User[] body )
+> void Invoke-OpenAPIUserApiCreateUsersWithListInput (PSOpenAPIClient.Model.User[] body )
 
 Creates list of users with given input array
 
 ### Example
 
 ```powershell
-CreateUsersWithListInput -body 
+Invoke-OpenAPIUserApiCreateUsersWithListInput -body 
 ```
 
 ### Parameters
@@ -146,9 +146,9 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## DeleteUser
+## Invoke-OpenAPIUserApiDeleteUser
 
-> void DeleteUser (String username )
+> void Invoke-OpenAPIUserApiDeleteUser (String username )
 
 Delete user
 
@@ -157,7 +157,7 @@ This can only be done by the logged in user.
 ### Example
 
 ```powershell
-DeleteUser -username username_example
+Invoke-OpenAPIUserApiDeleteUser -username username_example
 ```
 
 ### Parameters
@@ -192,16 +192,16 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## GetUserByName
+## Invoke-OpenAPIUserApiGetUserByName
 
-> PSOpenAPIClient.Model.User GetUserByName (String username )
+> PSOpenAPIClient.Model.User Invoke-OpenAPIUserApiGetUserByName (String username )
 
 Get user by user name
 
 ### Example
 
 ```powershell
-$result = GetUserByName -username username_example
+$result = Invoke-OpenAPIUserApiGetUserByName -username username_example
 ```
 
 ### Parameters
@@ -237,16 +237,16 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## LoginUser
+## Invoke-OpenAPIUserApiLoginUser
 
-> String LoginUser (String username , String password )
+> String Invoke-OpenAPIUserApiLoginUser (String username , String password )
 
 Logs user into the system
 
 ### Example
 
 ```powershell
-$result = LoginUser -username username_example -password password_example
+$result = Invoke-OpenAPIUserApiLoginUser -username username_example -password password_example
 ```
 
 ### Parameters
@@ -282,16 +282,16 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## LogoutUser
+## Invoke-OpenAPIUserApiLogoutUser
 
-> void LogoutUser ()
+> void Invoke-OpenAPIUserApiLogoutUser ()
 
 Logs out current logged in user session
 
 ### Example
 
 ```powershell
-LogoutUser
+Invoke-OpenAPIUserApiLogoutUser
 ```
 
 ### Parameters
@@ -322,9 +322,9 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UpdateUser
+## Invoke-OpenAPIUserApiUpdateUser
 
-> void UpdateUser (String username , User body )
+> void Invoke-OpenAPIUserApiUpdateUser (String username , User body )
 
 Updated user
 
@@ -333,7 +333,7 @@ This can only be done by the logged in user.
 ### Example
 
 ```powershell
-UpdateUser -username username_example -body 
+Invoke-OpenAPIUserApiUpdateUser -username username_example -body 
 ```
 
 ### Parameters

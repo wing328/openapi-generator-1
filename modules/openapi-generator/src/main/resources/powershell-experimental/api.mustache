@@ -1,6 +1,6 @@
 {{#operations}}
 {{#operation}}
-function Invoke-{{{classname}}}{{{operationId}}} {
+function Invoke-{{{methodPrefix}}}{{{classname}}}{{{operationId}}} {
     [CmdletBinding()]
     Param (
     {{#allParams}}
@@ -16,13 +16,15 @@ function Invoke-{{{classname}}}{{{operationId}}} {
         'Calling method: {{{classname}}}-{{{operationId}}}' | Write-Verbose
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
-        $Script:{{{classname}}}.{{{operationId}}}(
-        {{#allParams}}
-            {{=<% %>=}}
-            ${<%paramName%>}<%^-last%>,<%/-last%>
-            <%={{ }}=%>
-        {{/allParams}}
-        )
+        # TODO call Invoke-API
+
+        #$Script:{{{classname}}}.{{{operationId}}}(
+        #{{#allParams}}
+        #    {{=<% %>=}}
+        #    ${<%paramName%>}<%^-last%>,<%/-last%>
+        #    <%={{ }}=%>
+        #{{/allParams}}
+        #)
     }
 }
 

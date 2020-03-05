@@ -4,16 +4,16 @@ All URIs are relative to *http://petstore.swagger.io/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DeleteOrder**](StoreApi.md#deleteorder) | **DELETE** /store/order/{orderId} | Delete purchase order by ID
-[**GetInventory**](StoreApi.md#getinventory) | **GET** /store/inventory | Returns pet inventories by status
-[**GetOrderById**](StoreApi.md#getorderbyid) | **GET** /store/order/{orderId} | Find purchase order by ID
-[**PlaceOrder**](StoreApi.md#placeorder) | **POST** /store/order | Place an order for a pet
+[**Invoke-OpenAPIStoreApiDeleteOrder**](StoreApi.md#deleteorder) | **DELETE** /store/order/{orderId} | Delete purchase order by ID
+[**Invoke-OpenAPIStoreApiGetInventory**](StoreApi.md#getinventory) | **GET** /store/inventory | Returns pet inventories by status
+[**Invoke-OpenAPIStoreApiGetOrderById**](StoreApi.md#getorderbyid) | **GET** /store/order/{orderId} | Find purchase order by ID
+[**Invoke-OpenAPIStoreApiPlaceOrder**](StoreApi.md#placeorder) | **POST** /store/order | Place an order for a pet
 
 
 
-## DeleteOrder
+## Invoke-OpenAPIStoreApiDeleteOrder
 
-> void DeleteOrder (String orderId )
+> void Invoke-OpenAPIStoreApiDeleteOrder (String orderId )
 
 Delete purchase order by ID
 
@@ -22,7 +22,7 @@ For valid response try integer IDs with value < 1000. Anything above 1000 or non
 ### Example
 
 ```powershell
-DeleteOrder -orderId orderId_example
+Invoke-OpenAPIStoreApiDeleteOrder -orderId orderId_example
 ```
 
 ### Parameters
@@ -57,9 +57,9 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## GetInventory
+## Invoke-OpenAPIStoreApiGetInventory
 
-> {String, Int32} GetInventory ()
+> {String, Int32} Invoke-OpenAPIStoreApiGetInventory ()
 
 Returns pet inventories by status
 
@@ -68,7 +68,7 @@ Returns a map of status codes to quantities
 ### Example
 
 ```powershell
-$result = GetInventory
+$result = Invoke-OpenAPIStoreApiGetInventory
 ```
 
 ### Parameters
@@ -99,9 +99,9 @@ This endpoint does not need any parameter.
 [[Back to README]](../README.md)
 
 
-## GetOrderById
+## Invoke-OpenAPIStoreApiGetOrderById
 
-> PSOpenAPIClient.Model.Order GetOrderById (Int64 orderId )
+> PSOpenAPIClient.Model.Order Invoke-OpenAPIStoreApiGetOrderById (Int64 orderId )
 
 Find purchase order by ID
 
@@ -110,7 +110,7 @@ For valid response try integer IDs with value <= 5 or > 10. Other values will ge
 ### Example
 
 ```powershell
-$result = GetOrderById -orderId 789
+$result = Invoke-OpenAPIStoreApiGetOrderById -orderId 789
 ```
 
 ### Parameters
@@ -146,16 +146,16 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## PlaceOrder
+## Invoke-OpenAPIStoreApiPlaceOrder
 
-> PSOpenAPIClient.Model.Order PlaceOrder (Order body )
+> PSOpenAPIClient.Model.Order Invoke-OpenAPIStoreApiPlaceOrder (Order body )
 
 Place an order for a pet
 
 ### Example
 
 ```powershell
-$result = PlaceOrder -body 
+$result = Invoke-OpenAPIStoreApiPlaceOrder -body 
 ```
 
 ### Parameters

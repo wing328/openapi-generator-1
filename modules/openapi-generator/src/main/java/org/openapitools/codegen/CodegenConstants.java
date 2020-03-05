@@ -348,4 +348,7 @@ public class CodegenConstants {
 
     public static final String REMOVE_ENUM_VALUE_PREFIX = "removeEnumValuePrefix";
     public static final String REMOVE_ENUM_VALUE_PREFIX_DESC = "Remove the common prefix of enum values";
+
+    public static final String METHOD_PREFIX = "methodPrefix";
+    public static final String METHOD_PREFIX_DESC = "Prefix to be added to the method naming (e.g. GetTweet=> TwitterGetTweet)";
 }

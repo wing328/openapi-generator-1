@@ -42,6 +42,7 @@ public class PowerShellExperimentalClientCodegen extends DefaultCodegen implemen
     protected String sourceFolder = "src";
     //protected String packageName = "Org.OpenAPITools";
     protected String packageName = "PSOpenAPIClient";
+    protected String methodPrefix = "OpenAPI";
     protected String apiDocPath = "docs/";
     protected String modelDocPath = "docs/";
 
@@ -77,14 +78,14 @@ public class PowerShellExperimentalClientCodegen extends DefaultCodegen implemen
                 )
         );
         
-        outputFolder = "generated-code" + File.separator + "powershell";
+        outputFolder = "generated-code" + File.separator + "powershell-experimental";
         modelTemplateFiles.put("model.mustache", ".ps1");
         apiTemplateFiles.put("api.mustache", ".ps1");
         modelTestTemplateFiles.put("model_test.mustache", ".ps1");
         apiTestTemplateFiles.put("api_test.mustache", ".ps1");
         modelDocTemplateFiles.put("model_doc.mustache", ".md");
         apiDocTemplateFiles.put("api_doc.mustache", ".md");
-        embeddedTemplateDir = templateDir = "powershell";
+        embeddedTemplateDir = templateDir = "powershell-experimental";
         apiPackage = packageName + File.separator + "API";
         modelPackage = packageName + File.separator + "Model";
 
@@ -207,7 +208,7 @@ public class PowerShellExperimentalClientCodegen extends DefaultCodegen implemen
     }
 
     public String getHelp() {
-        return "Generates a PowerShell API client (beta). (The dependency C# API client needs to be generated separately.";
+        return "Generates a PowerShell API client (beta).";
     }
 
     public void setPackageName(String packageName) {
@@ -224,6 +225,10 @@ public class PowerShellExperimentalClientCodegen extends DefaultCodegen implemen
         this.packageGuid = packageGuid;
     }
 
+    public void setMethodPrefix(String methodPrefix) {
+        this.methodPrefix = methodPrefix;
+    }
+
     @Override
     public void processOpts() {
         super.processOpts();
@@ -237,6 +242,12 @@ public class PowerShellExperimentalClientCodegen extends DefaultCodegen implemen
             this.setPackageName((String) additionalProperties.get(CodegenConstants.PACKAGE_NAME));
         } else {
             additionalProperties.put(CodegenConstants.PACKAGE_NAME, packageName);
+        }
+
+        if (additionalProperties.containsKey(CodegenConstants.METHOD_PREFIX)) {
+            this.setMethodPrefix((String) additionalProperties.get(CodegenConstants.METHOD_PREFIX));
+        } else {
+            additionalProperties.put(CodegenConstants.METHOD_PREFIX, methodPrefix);
         }
 
         if (additionalProperties.containsKey(CodegenConstants.MODEL_PACKAGE)) {
@@ -269,6 +280,12 @@ public class PowerShellExperimentalClientCodegen extends DefaultCodegen implemen
 
         // en-US
         supportingFiles.add(new SupportingFile("about_Org.OpenAPITools.help.txt.mustache", infrastructureFolder + File.separator + "en-US" + File.separator + "about_" + packageName + ".help.txt"));
+
+        // add the Get-PetstoreConfiguration (example) file
+        supportingFiles.add(new SupportingFile("Get-Configuration.mustache", infrastructureFolder + File.separator + "Utils" + File.separator + "Get-" + methodPrefix+ "Configuration.ps1"));
+
+        // add the Invoke-PetstoreAPI (example) file
+        supportingFiles.add(new SupportingFile("Invoke-API.mustache", infrastructureFolder + File.separator + "Utils" + File.separator + "Invoke-" + packageName + ".ps1"));
 
     }
 

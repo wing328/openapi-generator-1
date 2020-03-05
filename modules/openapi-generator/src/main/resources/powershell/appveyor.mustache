@@ -1,0 +1,24 @@
+  
+version: 0.11.0.{build}
+
+install:
+    - ps: |
+        Write-Host "PowerShell Version:" $PSVersionTable.PSVersion.tostring()
+        Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
+        # Pester is the ubiquitous test and mock framework for PowerShell.
+        #Install-Module Pester -Force
+init:
+    - git config --global core.autocrlf true
+
+build_script:
+    - ps: |
+        .\build.ps1
+test_script:
+    - Invoke-Pester
+
+after_test:
+    - ps: |
+        Write-Host "After test completed"
+on_finish:
+    - ps: |
+        Write-Host "Finished"
